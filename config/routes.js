@@ -20,6 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  'GET /reminders': {controller: 'RemindersController', action: 'index'},
+  'POST /reminders/': {controller: 'RemindersController', action: 'create'},
 
 
   /***************************************************************************

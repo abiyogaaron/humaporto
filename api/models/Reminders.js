@@ -9,12 +9,21 @@ module.exports = {
   attributes: {
     message:{
       type: 'string',
-      required: true
+      required: true,
+      columnType: String
     },
     isDone:{
       type: 'boolean',
-      required: true,
-      //default: false
+      defaultsTo: false,
+      columnType: Boolean
+    },
+    alarm:{
+      type: 'ref',
+      columnType: Date
+    },
+    timeSpan:{
+      type: 'number',
+      columnType: Number
     }
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
@@ -30,5 +39,5 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-  }
+  },
 };
